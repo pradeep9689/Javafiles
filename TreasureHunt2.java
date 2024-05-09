@@ -26,7 +26,7 @@ public class TreasureHunt2 {
             if (path == 0) {
             	System.out.println("Wait");
             	System.out.println("Which door");
-            	System.out.println("2  for Red, 1 for yellow, 2 for blude");
+            	System.out.println("2  for Red, 1 for yellow, 2 for blue");
             	path = scanner.nextInt();
             if(path==1) {
             	 youWin();
@@ -35,8 +35,12 @@ public class TreasureHunt2 {
             	System.out.println("Burned by fire Game over");
             	
             }
-            else {
+            else if(path==2) {
+            	System.out.println("Eaten by beasts");
             	  gameOver();
+            }
+            else {
+            	 gameOver();
             }
                
             } else {
