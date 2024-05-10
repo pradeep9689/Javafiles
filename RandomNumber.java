@@ -29,7 +29,7 @@ public class RandomNumber {
         int numberToGuess = rand.nextInt(100) + 1;
         Scanner scanner = new Scanner(System.in);
         int guess;
-        int i=1;
+        int i=0;
         int k=5;
 
         System.out.println("Welcome to the number guessing game!");
