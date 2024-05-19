@@ -9,13 +9,12 @@ public class PigGame {
 		Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         System.out.println("Welcome to the PIG game!");
-        System.out.println("Please enetr target score");
-        int target=scanner.nextInt() ;
+      
         int totalScore = 0;
         int turnScore = 0;
         int turns = 0;  
         boolean gameOn = true;
-
+   System.out.println("Welcome to the PIG game!");
         
         		while (gameOn) {
             System.out.println("Turn: " + (turns + 1));
@@ -43,10 +42,10 @@ public class PigGame {
                 turns++;  
                 System.out.println("You chose to hold. Your total score is now: " + totalScore);
 
-                if (totalScore >= target) {
+                if (totalScore >=20) {
                     gameOn = false;
-                    System.out.println("Congratulations! You've reached" +target+" points and won the game!");
-                    System.out.println("It took you " + turns + " turns to reach" +target+" points.");
+                    System.out.println("Congratulations! You've reached 20 points and won the game!");
+                    System.out.println("It took you " + turns + " turns to reach 20 points.");
                 }
             } else {
                 System.out.println("Invalid input. Please type 'r' to roll or 'h' to hold.");
