@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class PigGame {
 
-    // Constants
+  
     private static final int WINNING_SCORE = 20;
     private static final int DICE_SIDES = 6;
     private static Scanner scanner = new Scanner(System.in);
