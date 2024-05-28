@@ -28,7 +28,7 @@ public class PigGame {
         
         while (true) {
             printStatus();
-            String choice = getUserChoice();
+            String choice = scanner.next();
 
             if (choice.equalsIgnoreCase("r")) {
                 rollDice();
@@ -54,9 +54,7 @@ public class PigGame {
         System.out.print("Do you want to roll or hold? (r/h): ");
     }
 
-    private String getUserChoice() {
-        return scanner.nextLine();
-    }
+
 
     private void rollDice() {
         int roll = random.nextInt(diceSides) + 1;
