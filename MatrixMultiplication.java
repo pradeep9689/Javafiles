@@ -13,14 +13,14 @@ public class MatrixMultiplication {
         }
     }
 
-    static void multiplyMatrix(int row1, int col1, int A[][], int row2, int col2, int B[][]) {
+    static void multiplyMatrix(int row1, int col1, int matrixA[][], int row2, int col2, int matrixB[][]) {
         int i, j, k;
 
        
         System.out.println("\nMatrix A:");
-        printMatrix(A, row1, col1);
+        printMatrix(matrixA, row1, col1);
         System.out.println("\nMatrix B:");
-        printMatrix(B, row2, col2);
+        printMatrix(matrixB, row2, col2);
 
        
         if (col1 != row2) {
@@ -29,20 +29,20 @@ public class MatrixMultiplication {
         }
 
         
-        int C[][] = new int[row1][col2];
+        int matrixC[][] = new int[row1][col2];
 
        
         for (i = 0; i < row1; i++) {
             for (j = 0; j < col2; j++) {
                 for (k = 0; k < col1; k++) {
-                    C[i][j] += A[i][k] * B[k][j];
+                    matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
                 }
             }
         }
 
         
         System.out.println("\nResul Matrix:");
-        printMatrix(C, row1, col2);
+        printMatrix(matrixC, row1, col2);
     }
 
     public static void main(String[] args) {
@@ -54,11 +54,11 @@ public class MatrixMultiplication {
         int col1 = scanner.nextInt();
 
         
-        int[][] A = new int[row1][col1];
+        int[][] matrixA = new int[row1][col1];
         System.out.println("Enter the elements of matrix A:");
         for (int i = 0; i < row1; i++) {
             for (int j = 0; j < col1; j++) {
-                A[i][j] = scanner.nextInt();
+                matrixA[i][j] = scanner.nextInt();
             }
         }
 
@@ -68,16 +68,16 @@ public class MatrixMultiplication {
         int col2 = scanner.nextInt();
 
        
-        int[][] B = new int[row2][col2];
+        int[][] matrixB = new int[row2][col2];
         System.out.println("Enter the elements of matrix B:");
         for (int i = 0; i < row2; i++) {
             for (int j = 0; j < col2; j++) {
-                B[i][j] = scanner.nextInt();
+                matrixB[i][j] = scanner.nextInt();
             }
         }
 
       
-        multiplyMatrix(row1, col1, A, row2, col2, B);
+        multiplyMatrix(row1, col1, matrixA, row2, col2, matrixB);
 
         scanner.close();
     }
